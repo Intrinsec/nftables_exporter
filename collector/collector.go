@@ -27,26 +27,26 @@ import (
 )
 
 // Namespace defines the common namespace to be used by all metrics.
-const namespace = "iptables"
+const namespace = "nftables"
 
 var (
 	scrapeDurationDesc = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, "scrape", "collector_duration_seconds"),
-		"iptables_exporter: Duration of a collector scrape.",
+		"nftables_exporter: Duration of a collector scrape.",
 		[]string{"collector"},
 		nil,
 	)
 	scrapeSuccessDesc = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, "scrape", "collector_success"),
-		"iptables_exporter: Whether a collector succeeded.",
+		"nftables_exporter: Whether a collector succeeded.",
 		[]string{"collector"},
 		nil,
 	)
 )
 
 const (
-	defaultEnabled  = true
-	defaultDisabled = false
+	defaultEnabled = true
+	//defaultDisabled = false
 )
 
 var (

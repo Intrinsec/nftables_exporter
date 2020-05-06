@@ -1,9 +1,9 @@
 go:
     # Whenever the Go version is updated here, .travis.yml and
     # .circle/config.yml should also be updated.
-    version: 1.12
+    version: 1.14
 repository:
-    path: github.com/ynsta/iptables_exporter
+    path: github.com/ynsta/nftables_exporter
 build:
     flags: -mod=vendor -a -tags netgo
     ldflags: |

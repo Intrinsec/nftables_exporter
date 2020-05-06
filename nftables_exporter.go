@@ -28,8 +28,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/prometheus/common/version"
-	"github.com/ynsta/iptables_exporter/collector"
-	"github.com/ynsta/iptables_exporter/https"
+	"github.com/ynsta/nftables_exporter/collector"
+	"github.com/ynsta/nftables_exporter/https"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 )
 
@@ -174,15 +174,15 @@ func main() {
 	if *disableDefaultCollectors {
 		collector.DisableDefaultCollectors()
 	}
-	level.Info(logger).Log("msg", "Starting iptables_exporter", "version", version.Info())
+	level.Info(logger).Log("msg", "Starting nftables_exporter", "version", version.Info())
 	level.Info(logger).Log("msg", "Build context", "build_context", version.BuildContext())
 
 	http.Handle(*metricsPath, newHandler(!*disableExporterMetrics, *maxRequests, logger))
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(`<html>
-			<head><title>IPTables Exporter</title></head>
+			<head><title>NFTables Exporter</title></head>
 			<body>
-			<h1>IPTables Exporter</h1>
+			<h1>NFTables Exporter</h1>
 			<p><a href="` + *metricsPath + `">Metrics</a></p>
 			</body>
 			</html>`))

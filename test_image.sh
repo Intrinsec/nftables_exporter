@@ -28,7 +28,7 @@ docker_cleanup() {
 }
 
 if [[ "$#" -ne 2 ]] ; then
-    echo "Usage: $0 ynsta/iptables-exporter:v0.1.1 9732" >&2
+    echo "Usage: $0 ynsta/nftables-exporter:v0.1.1 9732" >&2
     exit 1
 fi
 

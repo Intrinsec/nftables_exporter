@@ -1,8 +1,8 @@
-# iptables Exporter 
+# nftables Exporter 
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/ynsta/iptables_exporter)](https://goreportcard.com/report/github.com/ynsta/iptables_exporter)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ynsta/nftables_exporter)](https://goreportcard.com/report/github.com/ynsta/nftables_exporter)
 
-Prometheus stand alone exporter for iptables metrics.
+Prometheus stand alone exporter for nftables metrics.
 
 ## Building and running
 
@@ -12,20 +12,11 @@ Prometheus stand alone exporter for iptables metrics.
 
 ### Capabilities
 
-iptables_exporter requires some additional capabilities in order to collect its metrics
+`nftables_exporter` does not depends on `libnftnl` or `nft` binary but requires some 
+additional capabilities in order to collect its metrics
 
-    setcap CAP_NET_RAW,CAP_NET_ADMIN+ep iptables_exporter
+    setcap CAP_NET_ADMIN,CAP_SYS_ADMIN+ep nftables_exporter+ep nftables_exporter
 
 ### Running
 
-    ./iptables_exporter <flags>
-
-## Using Docker
-
-You can deploy this exporter using the [ynsta/iptables-exporter](https://registry.hub.docker.com/u/ynsta/iptables-exporter/) Docker image.
-
-For example:
-
-```bash
-FIXME
-```
+    ./nftables_exporter <flags>

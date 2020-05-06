@@ -5,8 +5,8 @@ LABEL maintainer="Stany MARCEL <stanypub@gmail.com>"
 
 ARG ARCH="amd64"
 ARG OS="linux"
-COPY .build/${OS}-${ARCH}/iptables_exporter /bin/iptables_exporter
+COPY .build/${OS}-${ARCH}/nftables_exporter /bin/nftables_exporter
 
 EXPOSE      9732
 USER        nobody
-ENTRYPOINT  [ "/bin/iptables_exporter" ]
+ENTRYPOINT  [ "/bin/nftables_exporter" ]

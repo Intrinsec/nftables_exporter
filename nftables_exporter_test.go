@@ -27,7 +27,7 @@ import (
 )
 
 var (
-	binary = filepath.Join(os.Getenv("GOPATH"), "bin/iptables_exporter")
+	binary = filepath.Join(os.Getenv("GOPATH"), "bin/nftables_exporter")
 )
 
 const (
@@ -36,7 +36,7 @@ const (
 
 func TestFileDescriptorLeak(t *testing.T) {
 	if _, err := os.Stat(binary); err != nil {
-		t.Skipf("iptables_exporter binary not available, try to run `make build` first: %s", err)
+		t.Skipf("nftables_exporter binary not available, try to run `make build` first: %s", err)
 	}
 	fs, err := procfs.NewDefaultFS()
 	if err != nil {
@@ -81,7 +81,7 @@ func TestFileDescriptorLeak(t *testing.T) {
 
 func TestHandlingOfDuplicatedMetrics(t *testing.T) {
 	if _, err := os.Stat(binary); err != nil {
-		t.Skipf("iptables_exporter binary not available, try to run `make build` first: %s", err)
+		t.Skipf("nftables_exporter binary not available, try to run `make build` first: %s", err)
 	}
 
 	exporter := exec.Command(binary, "--web.listen-address", address)

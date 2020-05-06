@@ -21,7 +21,7 @@ _testmain.go
 
 *.exe
 dependencies-stamp
-/iptables_exporter
+/nftables_exporter
 /.build
 /.deps
 /.release
