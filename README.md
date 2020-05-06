@@ -1,6 +1,6 @@
 # nftables Exporter 
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/ynsta/nftables_exporter)](https://goreportcard.com/report/github.com/ynsta/nftables_exporter)
+[![Go Report Card](https://goreportcard.com/badge/github.com/intrinsec/nftables_exporter)](https://goreportcard.com/report/github.com/intrinsec/nftables_exporter)
 
 Prometheus stand alone exporter for nftables metrics.
 

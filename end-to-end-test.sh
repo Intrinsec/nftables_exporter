@@ -100,7 +100,10 @@ get() {
 
 sleep 1
 
-get "127.0.0.1:${port}/metrics" | sed -e 's/ [0-9.e+-]\+$/ 0/' > "${tmpdir}/e2e-output.txt"
+get "127.0.0.1:${port}/metrics" | sed \
+  -e 's/ [0-9.e+-]\+$/ 0/' \
+  -e 's/^node_exporter_build_info.*/node_exporter_build_info 0/' \
+  -e 's/^go_info.*/go_info 0/' > "${tmpdir}/e2e-output.txt"
 
 diff -u \
   "${fixture}" \

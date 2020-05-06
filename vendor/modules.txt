@@ -78,7 +78,7 @@ github.com/vishvananda/netns
 ## explicit
 golang.org/x/crypto/bcrypt
 golang.org/x/crypto/blowfish
-# golang.org/x/net v0.0.0-20200505041828-1ed23360d12c
+# golang.org/x/net v0.0.0-20200506145744-7e3656a0809f
 ## explicit
 golang.org/x/net/bpf
 golang.org/x/net/internal/timeseries

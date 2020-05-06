@@ -25,11 +25,11 @@ import (
 
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
+	"github.com/intrinsec/nftables_exporter/collector"
+	"github.com/intrinsec/nftables_exporter/https"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/prometheus/common/version"
-	"github.com/ynsta/nftables_exporter/collector"
-	"github.com/ynsta/nftables_exporter/https"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 )
 

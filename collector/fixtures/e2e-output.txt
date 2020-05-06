@@ -12,7 +12,7 @@ go_gc_duration_seconds_count 0
 go_goroutines 0
 # HELP go_info Information about the Go environment.
 # TYPE go_info gauge
-go_info{version="go1.14.2"} 0
+go_info 0
 # HELP go_memstats_alloc_bytes Number of bytes allocated and still in use.
 # TYPE go_memstats_alloc_bytes gauge
 go_memstats_alloc_bytes 0
@@ -134,7 +134,7 @@ nftables_scrape_collector_duration_seconds{collector="nftables"} 0
 nftables_scrape_collector_success{collector="nftables"} 0
 # HELP node_exporter_build_info A metric with a constant '1' value labeled by version, revision, branch, and goversion from which node_exporter was built.
 # TYPE node_exporter_build_info gauge
-node_exporter_build_info{branch="master",goversion="go1.14.2",revision="ec2187cfe6bd2ac0b66593018020ccad6488bd1a",version="0.1.1"} 0
+node_exporter_build_info 0
 # HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
 # TYPE process_cpu_seconds_total counter
 process_cpu_seconds_total 0

@@ -3,7 +3,7 @@ go:
     # .circle/config.yml should also be updated.
     version: 1.14
 repository:
-    path: github.com/ynsta/nftables_exporter
+    path: github.com/intrinsec/nftables_exporter
 build:
     flags: -mod=vendor -a -tags netgo
     ldflags: |
