@@ -1,4 +1,4 @@
-// Copyright 2018 The Prometheus Authors
+// Copyright 2020 Intrinsec
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -22,11 +22,13 @@ import (
 	"syscall"
 	"unsafe"
 
+	"github.com/go-kit/kit/log"
 	"github.com/prometheus/client_golang/prometheus"
 )
 
 type ipTablesCollector struct {
-	entries *prometheus.Desc
+	current *prometheus.Desc
+	logger  log.Logger
 }
 
 type protocol int
@@ -56,13 +58,14 @@ func init() {
 }
 
 // NewIPTablesCollector returns a new Collector exposing IpTables stats.
-func NewIPTablesCollector() (Collector, error) {
+func NewIPTablesCollector(logger log.Logger) (Collector, error) {
 	return &ipTablesCollector{
-		entries: prometheus.NewDesc(
+		current: prometheus.NewDesc(
 			prometheus.BuildFQName(namespace, "iptables", "entries"),
 			"iptables number of entries by tables",
 			[]string{"proto", "table"}, nil,
 		),
+		logger: logger,
 	}, nil
 }
 
@@ -74,7 +77,7 @@ func (c *ipTablesCollector) Update(ch chan<- prometheus.Metric) (err error) {
 				continue
 			}
 			ch <- prometheus.MustNewConstMetric(
-				c.entries,
+				c.current,
 				prometheus.GaugeValue,
 				float64(res),
 				proto.String(),

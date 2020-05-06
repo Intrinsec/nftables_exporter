@@ -8,6 +8,12 @@ github.com/alecthomas/units
 github.com/beorn7/perks/quantile
 # github.com/cespare/xxhash/v2 v2.1.1
 github.com/cespare/xxhash/v2
+# github.com/go-kit/kit v0.10.0
+## explicit
+github.com/go-kit/kit/log
+github.com/go-kit/kit/log/level
+# github.com/go-logfmt/logfmt v0.5.0
+github.com/go-logfmt/logfmt
 # github.com/golang/protobuf v1.4.1
 ## explicit
 github.com/golang/protobuf/proto
@@ -15,14 +21,33 @@ github.com/golang/protobuf/ptypes
 github.com/golang/protobuf/ptypes/any
 github.com/golang/protobuf/ptypes/duration
 github.com/golang/protobuf/ptypes/timestamp
-# github.com/konsorten/go-windows-terminal-sequences v1.0.3
-github.com/konsorten/go-windows-terminal-sequences
+# github.com/google/nftables v0.0.0-20200316075819-7127d9d22474
+## explicit
+github.com/google/nftables
+github.com/google/nftables/binaryutil
+github.com/google/nftables/expr
+# github.com/jpillora/backoff v1.0.0
+## explicit
+github.com/jpillora/backoff
+# github.com/koneu/natend v0.0.0-20150829182554-ec0926ea948d
+github.com/koneu/natend
 # github.com/kr/text v0.2.0
 ## explicit
 # github.com/matttproud/golang_protobuf_extensions v1.0.1
 github.com/matttproud/golang_protobuf_extensions/pbutil
+# github.com/mdlayher/netlink v1.1.0
+## explicit
+github.com/mdlayher/netlink
+github.com/mdlayher/netlink/nlenc
+github.com/mdlayher/netlink/nltest
+# github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f
+## explicit
+github.com/mwitkow/go-conntrack
 # github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e
 ## explicit
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
 # github.com/prometheus/client_golang v1.6.0
 ## explicit
 github.com/prometheus/client_golang/prometheus
@@ -32,28 +57,37 @@ github.com/prometheus/client_golang/prometheus/promhttp
 github.com/prometheus/client_model/go
 # github.com/prometheus/common v0.9.1
 ## explicit
+github.com/prometheus/common/config
 github.com/prometheus/common/expfmt
 github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg
-github.com/prometheus/common/log
 github.com/prometheus/common/model
+github.com/prometheus/common/promlog
+github.com/prometheus/common/promlog/flag
 github.com/prometheus/common/version
 # github.com/prometheus/procfs v0.0.11
 ## explicit
 github.com/prometheus/procfs
 github.com/prometheus/procfs/internal/fs
 github.com/prometheus/procfs/internal/util
-# github.com/sirupsen/logrus v1.6.0
-## explicit
-github.com/sirupsen/logrus
 # github.com/stretchr/testify v1.5.1
 ## explicit
+# github.com/vishvananda/netns v0.0.0-20191106174202-0a2b9b5464df
+## explicit
+github.com/vishvananda/netns
+# golang.org/x/crypto v0.0.0-20200429183012-4b2356b1ed79
+## explicit
+golang.org/x/crypto/bcrypt
+golang.org/x/crypto/blowfish
+# golang.org/x/net v0.0.0-20200505041828-1ed23360d12c
+## explicit
+golang.org/x/net/bpf
+golang.org/x/net/internal/timeseries
+golang.org/x/net/trace
 # golang.org/x/sys v0.0.0-20200501145240-bc7a7d42d5c3
 ## explicit
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
 golang.org/x/sys/windows
-golang.org/x/sys/windows/registry
-golang.org/x/sys/windows/svc/eventlog
 # google.golang.org/protobuf v1.22.0
 google.golang.org/protobuf/encoding/prototext
 google.golang.org/protobuf/encoding/protowire
@@ -92,3 +126,4 @@ gopkg.in/alecthomas/kingpin.v2
 ## explicit
 # gopkg.in/yaml.v2 v2.2.8
 ## explicit
+gopkg.in/yaml.v2
